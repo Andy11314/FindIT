@@ -1,0 +1,87 @@
+
+.footer{
+    background-color: #061634;
+    color: #6479a2;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.header-top-bar{
+    background-color: #061634;
+    color: #6479a2;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+p.footer_p{
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-family: 'Merriweather', serif;
+}
+
+.footer p {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+p.footer_name{
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-family: 'Merriweather', serif;
+}
+
+p.footer_social{
+    color: white;
+}
+
+p.footer_social_icons{
+    color: white;
+    font-size: 32px;
+}
+
+p.footer_social_icons a {
+    color: white;
+    text-decoration:none;
+    margin-right: 30px;
+}
+
+p.footer_social_icons a:last-child{
+    margin-right: 0px;
+}
+
+p.footer_social_icons a:hover {
+    color: #FFE400;
+}
+
+.button{
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+
+    display: inline-block;
+
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 50px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 23px;
+    padding-right: 23px;
+
+    margin-bottom: 13px;
+
+    transition: 0.4s ease-out;
+}
+
+.button:hover{
+    color: #061634;
+    background-color: white;
+}
+
+

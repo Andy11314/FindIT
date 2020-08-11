@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная - бюро находок</title>
+
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="script" href="modal.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="short icon" type="image/x-icon" href="img/min_logo.JPG">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-top-bar ">
+            <div class="container">
+                <div class="d-flex bd-highlight mb-3 align-items-center">
+                    <div class="mr-auto p-2 bd-highlight">
+                        <button class="btn btn-link text-light">
+                            <p class="h3">
+                                <i class="fa fa-globe" aria-hidden="true"></i>  Алматы
+                            </p>
+                        </button>
+                    </div>
+                    <div class="p-2 bd-highlight"><a href="#" class="button" data-toggle="modal" data-target="#Sign_in"> <i class="fa fa-user" aria-hidden="true"></i> Войти </a></div>
+                    <div class="p-2 bd-highlight"><a href="#" class="button" data-toggle="modal" data-target="#Sign_up"><i class="fa fa-user-plus" aria-hidden="true"></i> Зарегистрироваться </a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container">
+                <div class="row align-items-center py-4">
+                    <div class="col-6">
+                        <img src="img/logo1.JPG" alt="findIT">
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <button type="button" class="button badge-pill btn-outline-dark btn-lg btn-block"  data-toggle="modal" data-target="#Report">
+                                Подать объявление
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-search-bar mb-4">
+                <div class="input-group">
+                    <input class="form-control border-secondary" type="text" placeholder="Поиск">
+                    <div class="dropdown input-group-append">
+                        <button class="btn btn-outline-secondary dropdown-toogle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Алматы
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"> Нур-Султан</a>
+                            <a class="dropdown-item" href="#"> Талдыкорган</a>
+                            <a class="dropdown-item" href="#"> Тараз</a>
+                            <a class="dropdown-item" href="#"> Шымкент</a>
+                        </div>
+                    </div>
+                        <div class="dropdown input-group-append">
+                            <button class="btn btn-outline-secondary dropdown-toogle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Категория
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"> Техника</a>
+                                <a class="dropdown-item" href="#"> Документы</a>
+                                <a class="dropdown-item" href="#"> Питомцы</a>
+                                <a class="dropdown-item" href="#"> Ключи</a>
+                            </div>
+                        </div>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-dark" type="button">
+                            <i class="fa fa-search" aria-hidden="true"></i> Поиск
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.header-search-bar -->
+            <div class="header-category-bar mb-4">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="h5"> Популярные категории</h3>
+                        <span class="badge badge-pill badge-primary m-1"> Документы</span>
+                        <span class="badge badge-pill badge-success m-1"> Питомцы</span>
+                        <span class="badge badge-pill badge-warning m-1"> Ключи</span>
+                    </div>
+                    <div class="col-6">
+                        <h3 class="h5"> Популярные места</h3>
+                        <span class="badge badge-pill badge-light border border-primary m-1"> Аэропорт</span>
+                        <span class="badge badge-pill badge-light border border-primary m-1"> Метро</span>
+                    </div>
+                </div>
+            </div>
+            <!-- /.header-category-bar -->
+        </div>
+    </header>
+
+    <!--Sign in Modal -->
+    <div class="modal fade" id="Sign_in" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Авторизация</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Электронная почта</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="asd@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Пароль</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="qwe123">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1"> Запомнить меня</label>
+                    </div>
+                    <button type="submit" class="button badge-pill btn-outline-dark btn-lg btn-block">Войти</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Sign up Modal -->
+    <div class="modal fade" id="Sign_up" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Регистрация</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputName">Имя</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Ваше имя">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputSurname">Фамилия</label>
+                                <input type="text" class="form-control" id="inputSurname" placeholder="Ваша фамилия">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Ваша почта">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPass1">Пароль</label>
+                            <input type="password" class="form-control" id="inputPass1" placeholder="Придумайте пароль">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPass2">Подтвердите свой пароль</label>
+                            <input type="password" class="form-control" id="inputPass2" placeholder="Повторите пароль">
+                        </div>
+                        <button type="submit" class="button badge-pill btn-outline-dark btn-lg btn-block"> Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Report Modal -->
+    <div class="modal fade" id="Report" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Объявление</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputDescription">Описание</label>
+                            <input type="text" class="form-control" id="inputDescription">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone">Ваши контакты</label>
+                            <input type="email" class="form-control" id="inputPhone" placeholder="Ваш номер телефона">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputCity">Город</label>
+                            <input type="password" class="form-control" id="inputCity" placeholder="Город">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail4">Почта</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Ваша почта">
+                        </div>
+                        <div class="form-group">
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Нашлось / Потерялось</label>
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            <option selected>Выбрать.</option>
+                            <option value="1">Потерялось</option>
+                            <option value="2">Нашлось</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Вставить изображение</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                        <button type="submit" class="button badge-pill btn-outline-dark btn-lg btn-block"> Подать объявление</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="page-content">
+                <h2 class="page-title h5 mb-2">
+                    <i class="fa fa-search text-primary" aria-hidden="true"></i> Нашлось
+                    <a href="#" class="btn btn-link"> Смотреть всё</a>
+                </h2>
+                <div class="row mb-5">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="img/zhO2JDux5Ug.jpg" class="card-img-top" alt="Удостоверение">
+                            <div class="card-body">
+                                <h5 class="card-title">Найдено удостоверение личности на имя Ивченко Никита.</h5>
+                                <p class="card-text"> Обращаться по номеру:<br><i class="fa fa-phone" aria-hidden="true"></i> 87083657454</p>
+                                <span><i class="fa fa-map-marker text-primary" aria-hidden="true"></i> Алматы</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="img/zhO2JDux5Ug.jpg" class="card-img-top" alt="Удостоверение">
+                            <div class="card-body">
+                                <h5 class="card-title">Найдено удостоверение личности на имя Ивченко Никита.</h5>
+                                <p class="card-text"> Обращаться по номеру:<br><i class="fa fa-phone" aria-hidden="true"></i> 87083657454</p>
+                                <span><i class="fa fa-map-marker text-primary" aria-hidden="true"></i> Алматы</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="img/zhO2JDux5Ug.jpg" class="card-img-top" alt="Удостоверение">
+                            <div class="card-body">
+                                <h5 class="card-title">Найдено удостоверение личности на имя Ивченко Никита.</h5>
+                                <p class="card-text"> Обращаться по номеру:<br><i class="fa fa-phone" aria-hidden="true"></i> 87083657454</p>
+                                <span><i class="fa fa-map-marker text-primary" aria-hidden="true"></i> Алматы</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="img/zhO2JDux5Ug.jpg" class="card-img-top" alt="Удостоверение">
+                            <div class="card-body">
+                                <h5 class="card-title">Найдено удостоверение личности на имя Ивченко Никита.</h5>
+                                <p class="card-text"> Обращаться по номеру:<br><i class="fa fa-phone" aria-hidden="true"></i> 87083657454</p>
+                                <span><i class="fa fa-map-marker text-primary" aria-hidden="true"></i> Алматы</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="page-title h5 mb-2">
+                    <i class="fa fa-question text-primary" aria-hidden="true"></i> Потерялось
+                    <a href="#" class="btn btn-link"> Смотреть всё</a>
+                </h2>
+                <div class="row mb-3">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="img/zhO2JDux5Ug.jpg" class="card-img-top" alt="Удостоверение">
+                            <div class="card-body">
+                                <h5 class="card-title">Найдено удостоверение личности на имя Ивченко Никита.</h5>
+                                <p class="card-text"> Обращаться по номеру:<br><i class="fa fa-phone" aria-hidden="true"></i> 87083657454</p>
+                                <span><i class="fa fa-map-marker text-primary" aria-hidden="true"></i> Алматы</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="img/zhO2JDux5Ug.jpg" class="card-img-top" alt="Удостоверение">
+                            <div class="card-body">
+                                <h5 class="card-title">Найдено удостоверение личности на имя Ивченко Никита.</h5>
+                                <p class="card-text"> Обращаться по номеру:<br><i class="fa fa-phone" aria-hidden="true"></i> 87083657454</p>
+                                <span><i class="fa fa-map-marker text-primary" aria-hidden="true"></i> Алматы</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="img/zhO2JDux5Ug.jpg" class="card-img-top" alt="Удостоверение">
+                            <div class="card-body">
+                                <h5 class="card-title">Найдено удостоверение личности на имя Ивченко Никита.</h5>
+                                <p class="card-text"> Обращаться по номеру:<br><i class="fa fa-phone" aria-hidden="true"></i> 87083657454</p>
+                                <span><i class="fa fa-map-marker text-primary" aria-hidden="true"></i> Алматы</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="img/zhO2JDux5Ug.jpg" class="card-img-top" alt="Удостоверение">
+                            <div class="card-body">
+                                <h5 class="card-title">Найдено удостоверение личности на имя Ивченко Никита.</h5>
+                                <p class="card-text"> Обращаться по номеру:<br><i class="fa fa-phone" aria-hidden="true"></i> 87083657454</p>
+                                <span><i class="fa fa-map-marker text-primary" aria-hidden="true"></i> Алматы</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.page-content -->
+        </div>
+        <!-- /.container -->
+    </main>
+
+    <div class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <p class="footer_name">©Калмуханбетов Ильяс</p>
+                    <p class="footer_p">Бюро находок</p>
+                </div>
+
+                <div class="col-4">
+                    <p class="footer_social"> Профили в социальных сетях:</p>
+                    <p class="footer_social_icons">
+                        <a href="#" target="_blank"><i class="fa fa-vk"></i> </a>
+                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                    </p>
+                </div>
+
+                <div class="col-4">
+                    <div><a href="#" class="button" target="_blank">связаться ВКОНТАКТЕ</a></div>
+                    <p>Напишите мне, если с вами связались мошенники</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
